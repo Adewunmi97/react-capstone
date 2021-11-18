@@ -70,7 +70,7 @@ const Home = () => {
                   .map((filteredData) => {
                     const { country, confirmed } = filteredData.All;
                     return (
-                      <Col className="card" xs={6} md={3} key={filteredData.abbreviation}>
+                      <Col className="card breakdown" xs={6} md={3} key={filteredData.abbreviation}>
                         <div className="arrow">
                           <Button className="btn" type="button" onClick={() => dispatch(fetchCountryData(country))}>
                             <Link to={`/country/${country}`} className="text-light"><FontAwesomeIcon icon={faArrowAltCircleRight} size="1.5x" /></Link>

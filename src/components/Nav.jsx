@@ -9,7 +9,7 @@ import {
 import {
   Container,
 } from 'react-bootstrap';
-import './nav.css';
+import './Nav.css';
 
 export default function Nav() {
   const history = useHistory();

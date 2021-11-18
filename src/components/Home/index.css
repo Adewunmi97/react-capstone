@@ -3,12 +3,12 @@
 
 body {
   color: #fff;
-  background-color: #4369b2;
+  background-color: #eb4c89;
 }
 
 .card {
   color: #fff;
-  background-color: #4b71b9;
+  background-color: rgba(0, 0, 0, 0.08);
   opacity: 0.7;
 }
 
@@ -16,9 +16,13 @@ body {
   opacity: 0.3;
 }
 
-.card:nth-child(4n + 2),
-.card:nth-child(4n + 3) {
-  background-color: #668dd4;
+.breakdown:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.card:nth-child(4n + 4),
+.card:nth-child(4n + 2) {
+  background-color: rgba(0, 0, 0, 0.08);
   z-index: 2;
 }
 
@@ -48,7 +52,7 @@ body {
 }
 
 .title {
-  background-color: #5888e4;
+  background-color: rgba(0, 0, 0, 0.08);
   font-family: 'Gill Sans ExtraBoldDisplay', sans-serif;
 }
 
