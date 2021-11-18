@@ -20,7 +20,7 @@ function App() {
           exact
           path="/country/:countryName"
           render={() => (
-            <Details />
+            <Info />
           )}
         />
       </Switch>

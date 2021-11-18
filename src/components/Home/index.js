@@ -12,7 +12,7 @@ import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import fetchCovidData from '../../redux/worldData/world.actions';
 import fetchCountryData from '../../redux/countryData/country.actions';
-import './Index.css';
+import './index.css';
 import covid from '../covid.png';
 
 const override = css`
@@ -109,4 +109,3 @@ Home.defaultProps = {
   continentalCovidData: PropTypes.func,
 };
 export default Home;
-                                                                                                                                                                                                                                    
