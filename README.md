@@ -1,6 +1,9 @@
 # react-capstone
 A Metrics-webapp is a mobile web application to check a list of corona virus statistics based on country (numeric values). It's built with React and Redux.
 
+## Screenshot
+![image](https://user-images.githubusercontent.com/60876346/142461486-dd4d7d55-f955-4f37-bfda-6cf32056e363.png)
+
 ## Live Link
 [World Statistics On Covid-19]()
 
@@ -11,11 +14,8 @@ A Metrics-webapp is a mobile web application to check a list of corona virus sta
 To get started, you should first get this file in your local machine by cloning or forking this project or typing in your terminal
 ```
  git clone https://github.com/Adewunmi97/react-capstone.git
-
- cd metrics-webapp
-
+ cd react-capstone
  npm install
-
  npx start
 ```
 
@@ -28,23 +28,17 @@ To test the components, just run the command below on command line.
 ## Contributing
 
 Contributions, issues and feature requests are welcome! Start by:
-
 Forking the project
-
 Cloning the project to your local machine
-
 cd into the project directory
 
 ```
 cd react-capstone
-
- Run git checkout -b your-branch-name
+Run git checkout -b your-branch-name
 ```
 
 Make your contributions
-
 Push your branch up to your forked repository
-
 Open a Pull Request with a detailed description to the development branch of the original project for a review
 
 ---
@@ -54,13 +48,10 @@ Built With
 This project was built using these technologies.
 
 ```
-react(create-react-app)
-
-redux
-
-Git
-
-Github
+- react(create-react-app)
+- redux
+- Git
+- Github
 ```
 
 ## Contributors
