@@ -5,7 +5,7 @@ A Metrics-webapp is a mobile web application to check a list of corona virus sta
 ![image](https://user-images.githubusercontent.com/60876346/142461486-dd4d7d55-f955-4f37-bfda-6cf32056e363.png)
 
 ## Live Link
-[World Statistics On Covid-19]()
+[World Statistics On Covid-19](https://ade-react-capstone.netlify.app/)
 
 ## Getting Started
 
