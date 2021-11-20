@@ -3,42 +3,76 @@ import { useSelector } from 'react-redux';
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  Container,
+  Col,
+  Container, Row,
 } from 'react-bootstrap';
+import covid from '../covid.png';
 
 function Info() {
   const countryCovidData = useSelector(({ country }) => country.covidData);
+  let countryName = '';
+  let confirmedCases = '';
+  if (countryCovidData?.length) {
+    countryName = countryCovidData[0].country;
+    confirmedCases = countryCovidData[0].confirmed;
+  }
 
   return (
     <Container>
       <div className="details_page">
+        <Row className="title">
+          <Col xs={6}>
+            <img src={covid} alt="covid" className="img" />
+          </Col>
+          <Col xs={6} className="regionName">
+            <h1 className="region">{countryName.toUpperCase()}</h1>
+            <p className="cases">
+              {confirmedCases}
+              {' '}
+              cases
+            </p>
+          </Col>
+        </Row>
         <div className="inside">
           {
         countryCovidData.length > 0 ? countryCovidData.map(({
-          confirmed, deaths, country, capitalCity, abbreviation,
+          confirmed, deaths, recovered, abbreviation,
         }) => (
           <div className="country" key={abbreviation}>
-
-            <div>
-              <h4>
-                { country }
-              </h4>
-            </div>
-            <div>
-              <h5 className="cases">
+            <div className="d-flex justify-content-between tab">
+              <h5 className="">
                 Confirmed Cases: &nbsp;
-                { confirmed }
               </h5>
+              <div className="d-flex justify-content-between">
+                <p className="me-2">{ confirmed }</p>
+                <div>
+                  <p><FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
+                </div>
+              </div>
             </div>
-            <div>
+            <div className="tab">
               <h5>
                 Deaths: &nbsp;
-                { deaths }
+
               </h5>
+              <div className="d-flex justify-content-between">
+                <p className="me-2">{ deaths }</p>
+                <div>
+                  <p><FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
+                </div>
+              </div>
+            </div>
+            <div className="tab">
               <h5>
-                Capital: &nbsp;
-                { capitalCity }
+                Recovered: &nbsp;
+
               </h5>
+              <div className="d-flex justify-content-between">
+                <p className="me-2">{ recovered }</p>
+                <div>
+                  <p><FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -46,9 +80,6 @@ function Info() {
           <p>No data to display...</p>
         )
       }
-        </div>
-        <div>
-          <p><FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
         </div>
       </div>
     </Container>

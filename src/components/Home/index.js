@@ -26,6 +26,7 @@ const Home = () => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
   const [region, setRegion] = useState('africa');
+  let cardCount = 1;
 
   useEffect(() => {
     (async () => {
@@ -67,10 +68,18 @@ const Home = () => {
             <Row>
               {
                 continentalCovidData.filter((continentalCovidData) => continentalCovidData)
-                  .map((filteredData) => {
+                  .map((filteredData, index) => {
+                    let darkBg = false;
+                    if (index === cardCount) {
+                      darkBg = true;
+                    }
+                    if (index === (cardCount + 1)) {
+                      darkBg = true;
+                      cardCount += 4;
+                    }
                     const { country, confirmed } = filteredData.All;
                     return (
-                      <Col className="card breakdown" xs={6} md={3} key={filteredData.abbreviation}>
+                      <Col className={`card breakdown ${darkBg && 'custom-dark-bg'}`} xs={6} md={3} key={filteredData.abbreviation}>
                         <div className="arrow">
                           <Button className="btn" type="button" onClick={() => dispatch(fetchCountryData(country))}>
                             <Link to={`/country/${country}`} className="text-light"><FontAwesomeIcon icon={faArrowAltCircleRight} size="1.5x" /></Link>

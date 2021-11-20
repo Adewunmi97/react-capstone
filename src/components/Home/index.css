@@ -10,6 +10,7 @@ body {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.08);
   opacity: 0.7;
+  width: 50% !important;
 }
 
 .card:hover {
@@ -46,9 +47,31 @@ body {
 
 .regionName {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   font-family: 'Lato', sans-serif;
+  position: relative;
+}
+
+.cases {
+  position: absolute;
+  right: 16px;
+  bottom: 40px;
+}
+
+.tab {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 0;
+}
+
+#root {
+  max-width: 450px;
+  margin: auto;
+}
+
+.tab:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .title {
@@ -70,7 +93,7 @@ body {
 }
 
 .details_page {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -86,4 +109,9 @@ body {
   display: flex;
   float: right;
   justify-content: flex-end;
+}
+
+.custom-dark-bg {
+  background: rgba(0, 0, 0, 0.1) !important;
+  opacity: initial;
 }
